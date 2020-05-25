@@ -1,0 +1,509 @@
+html, body, a {
+  cursor: none;
+}
+
+body{
+  margin: 0px;
+  height: 1400px;
+  width: 1400px;
+  background-color: black;
+  position: relative;
+
+  z-index: -99;
+}
+
+#parent {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+
+  height: 1000px;
+  width: 1000px;
+
+  position: absolute;
+
+  background-color: whitesmoke;
+
+  top:200px;
+  left:200px;
+
+  z-index: 0;
+}
+
+#parent > div{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+
+  position: absolute;
+}
+
+#sliderboxU {
+  height: 200px;
+  width: 1000px;
+
+  top: 0px;
+  left: 0px;
+
+  background-color: whitesmoke;
+
+  transition: 1s;
+
+  z-index: 3;
+}
+
+#sliderboxD {
+  height: 200px;
+  width: 1000px;
+
+  top: 800px;
+  left: 0px;
+  
+  background-color: whitesmoke;
+
+  transition: 1s;
+
+  z-index: 8;
+}
+
+#sliderboxL {
+  height: 1000px;
+  width: 200px;
+
+  top: 0px;
+  left: 0px;
+  
+  background-color: whitesmoke;
+
+  transition: 1s;
+
+  z-index: 13;
+}
+
+#sliderboxR {
+  height: 1000px;
+  width: 200px;
+
+  top: 0px;
+  left: 800px;
+  
+  background-color: whitesmoke;
+
+  transition: 1s;
+
+  z-index: 18;
+}
+
+#pannelbox {
+  height: 600px;
+  width: 600px;
+
+  top: 200px;
+  left: 200px;
+
+  background-color: black;
+
+  z-index: auto;
+}
+
+#pannelbox > div{
+  height: 100px;
+  width: 100px;
+
+  position: absolute;
+}
+
+#pannel11 {
+  top: 0px;
+  left: 0px;
+
+  z-index: 4;
+}
+
+#pannel21 {
+  top: 0px;
+  left: 100px;
+
+  z-index: 9;
+}
+
+#pannel31 {
+  top: 0px;
+  left: 200px;
+
+  z-index: 14;
+}
+
+#pannel41 {
+  top: 0px;
+  left: 300px;
+
+  z-index: 19;
+}
+
+#pannel51 {
+  top: 0px;
+  left: 400px;
+
+  z-index: 24;
+
+  background-color: black;
+}
+
+#pannel61 {
+  top: 0px;
+  left: 500px;
+
+  background-color: black;
+}
+
+#pannel12 {
+  top: 100px;
+  left: 0px;
+
+  background-color: black;
+}
+
+#pannel22 {
+  top: 100px;
+  left: 100px;
+
+  background-color: black;
+}
+
+#pannel32 {
+  top: 100px;
+  left: 200px;
+
+  background-color: black;
+}
+
+#pannel42 {
+  top: 100px;
+  left: 300px;
+
+  background-color: black;
+}
+
+#pannel52 {
+  top: 100px;
+  left: 400px;
+
+  background-color: black;
+}
+
+#pannel62 {
+  top: 100px;
+  left: 500px;
+
+  background-color: black;
+}
+
+#pannel13 {
+  top: 200px;
+  left: 0px;
+
+  background-color: black;
+}
+
+#pannel23 {
+  top: 200px;
+  left: 100px;
+
+  background-color: black;
+}
+
+#pannel33 {
+  top: 200px;
+  left: 200px;
+
+  background-color: black;
+}
+
+#pannel43 {
+  top: 200px;
+  left: 300px;
+
+  background-color: black;
+}
+
+#pannel53 {
+  top: 200px;
+  left: 400px;
+
+  background-color: black;
+}
+
+#pannel63 {
+  top: 200px;
+  left: 500px;
+
+  background-color: black;
+}
+
+#pannel14 {
+  top: 300px;
+  left: 0px;
+
+  background-color: black;
+}
+
+#pannel24 {
+  top: 300px;
+  left: 100px;
+
+  background-color: black;
+}
+
+#pannel34 {
+  top: 300px;
+  left: 200px;
+
+  background-color: black;
+}
+
+#pannel44 {
+  top: 300px;
+  left: 300px;
+
+  background-color: black;
+}
+
+#pannel54 {
+  top: 300px;
+  left: 400px;
+
+  background-color: black;
+}
+
+#pannel64 {
+  top: 300px;
+  left: 500px;
+
+  background-color: black;
+}
+
+#pannel15 {
+  top: 400px;
+  left: 0px;
+
+  background-color: black;
+}
+
+#pannel25 {
+  top: 400px;
+  left: 100px;
+
+  background-color: black;
+}
+
+#pannel35 {
+  top: 400px;
+  left: 200px;
+
+  background-color: black;
+}
+
+#pannel45 {
+  top: 400px;
+  left: 300px;
+
+  background-color: black;
+}
+
+#pannel55 {
+  top: 400px;
+  left: 400px;
+
+  background-color: black;
+}
+
+#pannel65 {
+  top: 400px;
+  left: 500px;
+
+  background-color: black;
+}
+
+#pannel16 {
+  top: 500px;
+  left: 0px;
+
+  background-color: black;
+}
+
+#pannel26 {
+  top: 500px;
+  left: 100px;
+
+  background-color: black;
+}
+
+#pannel36 {
+  top: 500px;
+  left: 200px;
+
+  background-color: black;
+}
+
+#pannel46 {
+  top: 500px;
+  left: 300px;
+
+  background-color: black;
+}
+
+#pannel56 {
+  top: 500px;
+  left: 400px;
+
+  background-color: black;
+}
+
+#pannel66 {
+  top: 500px;
+  left: 500px;
+
+  background-color: black;
+}
+
+
+#pannel11 > div{
+  width: 0;
+  height: 0;
+  border-top: 80px solid black;
+  border-right: 30px solid transparent;
+  border-bottom: 80px solid transparent;
+  border-left: 30px solid transparent;
+}
+
+
+#pannel21 > div{
+  width: 0;
+  height: 0;
+  border-right: 80px solid black;
+  border-top: 30px solid transparent;
+  border-left: 80px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+
+#pannel31 > div{
+  width: 0;
+  height: 0;
+  border-left: 80px solid black;
+  border-top: 30px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+
+#pannel41 > div{
+  width: 0;
+  height: 0;
+  border-bottom: 80px solid black;
+  border-right: 30px solid transparent;
+  border-top: 80px solid transparent;
+  border-left: 30px solid transparent;
+}
+
+
+#stalker {
+  pointer-events: none;
+    position: fixed;
+    top: -16px;
+    left: -16px;
+    width: 32px;
+    height: 32px;
+    background: black;
+    border-radius: 50%;
+    transform: translate(0,0);
+    z-index: 998;
+}
+
+
+
+
+
+
+
+
+/*
+.parent {
+  height: 1000px;
+  background-color: aquamarine;
+  position: relative;
+}
+
+
+#B1 {
+  height: 300px;
+  width:  300px;
+  position: absolute;
+  top:  100px;
+  left: 100px;
+  z-index: 2;
+}
+#B1:hover {
+  opacity: 0.2;
+  transition: 1s;
+}
+
+
+#B2 {
+  height: 300px;
+  width:  300px;
+  position: absolute;
+  top:  200px;
+  left: 200px;
+  z-index: 1;
+}
+#B2:hover {
+  opacity: 0.2;
+  transition: 1s;
+}
+
+#box1 {
+  margin: 0;
+  padding: 0;
+
+  width: 50px;
+  height: 50px;
+  background: red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  transition: all 2s ease-in-out 100ms;
+}
+
+#box2 {
+  margin: 0;
+  padding: 0;
+
+  width: 50px;
+  height: 50px;
+  background: rgb(72, 0, 255);
+  position: absolute;
+  top: 600px;
+  left: 600px;
+
+  transition: all 2s;
+}
+*/
+
+/*
+
+.parent #B4 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 299px;
+  left: 200px;
+  z-index: 4;
+}
+.parent #B4:hover {
+  opacity: 0.2;
+  transition-duration: 2s;
+}
+*/
