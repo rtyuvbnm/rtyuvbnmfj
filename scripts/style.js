@@ -42,12 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  //すべてのクラスの透明度を0にする
-  function init_layers(){
-    for(i = 1; i <= 6; i++){
-      init_layer_class(i);
-    }
-  }
 
   //クラスの透明度を1にする
   function appear_layer_class(stageNum){
@@ -183,82 +177,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 }, false);
-
-
-
-
-/*
-  let sliderU = document.getElementById('sliderboxU');
-  let sliderD = document.getElementById('sliderboxD');
-  let sliderL = document.getElementById('sliderboxL');
-  let sliderR = document.getElementById('sliderboxR');
-*/
-
-/*
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  let B1 = document.getElementById('B1');
-  let B2 = document.getElementById('B2');
-
-  let click_cnt = 0;
-  let z1 = '1';
-  let z2 = '2';
-  let x = 0;
-  let y = 0;
-  function moveBox(event){
-    x = event.offsetX;
-    y = event.offsetY;
-    if(event.target.id === 'B1'){
-      x += B1.offsetLeft;
-      y += B1.offsetTop;
-    }
-    else if(event.target.id === 'B2'){
-      x += B2.offsetLeft;
-      y += B2.offsetTop;
-    }
-    document.getElementById('box1').style.left = (x - 25) + 'px';
-    document.getElementById('box1').style.top = (y - 25) + 'px';
-    document.getElementById('box2').style.left = x + 'px';
-    document.getElementById('box2').style.top = y + 'px';
-    if(click_cnt){
-      B1.style.zIndex = z1;
-    }
-    else {
-      B1.style.zIndex = z2;
-    }
-    if(click_cnt){
-      B2.style.zIndex = z2;
-    }
-    else {
-      B2.style.zIndex = z1;
-    }
-    click_cnt++;
-    click_cnt %= 2;
-  }
-
-  document.addEventListener('click', moveBox);
-}, false);
-
-*/
-
-
-
-/*
-//ON
-document.addEventListener("DOMContentLoaded", () => {
-  var B1 = document.getElementById('B1');
-  B1.onclick = () => {
-        let t = parseInt(B1.style.top, 20);
-        let l = parseInt(B1.style.left, 20);
-        B1.style.top = toString(t + 20);
-        B1.style.left = toString(l + 20);
-  };
-}, false);
-/*
-//OUT
-B1.addEventListener('mouseleave', () => {
-  　　B1.style.color = "white";
-  
-}, false);
-*/

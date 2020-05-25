@@ -34,22 +34,6 @@ const server = http.createServer((req, res) => {
           rs.pipe(res);
           break;
         }
-        case '/meiro_sozai/black.png':{
-          res.writeHead(200, {
-            'Content-Type': 'image/png'
-          });
-          const rs = fs.createReadStream('./meiro_sozai/black.png');
-          rs.pipe(res);
-          break;
-        }
-        case '/meiro_sozai/black_arrow_up.png':{
-          res.writeHead(200, {
-            'Content-Type': 'image/png'
-          });
-          const rs = fs.createReadStream('./meiro_sozai/black_arrow_up.png');
-          rs.pipe(res);
-          break;
-        }
         default:{
           break;
         }
