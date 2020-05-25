@@ -1,0 +1,8 @@
+{
+  "name": "human",
+  "description": "human",
+  "repository": "https://github.com/rtyuvbnm/rtyuvbnmfj",
+  "logo": "",
+  "keywords": ["node"],
+  "image": "heroku/nodejs"
+}
