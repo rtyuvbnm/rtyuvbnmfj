@@ -34,6 +34,38 @@ const server = http.createServer((req, res) => {
           rs.pipe(res);
           break;
         }
+        case '/images/eye1.png':{
+          res.writeHead(200, {
+            'Content-Type': 'image/png'
+          });
+          const rs = fs.createReadStream('./images/eye1.png');
+          rs.pipe(res);
+          break;
+        }
+        case '/images/eye2.png':{
+          res.writeHead(200, {
+            'Content-Type': 'image/png'
+          });
+          const rs = fs.createReadStream('./images/eye2.png');
+          rs.pipe(res);
+          break;
+        }
+        case '/images/eye3.png':{
+          res.writeHead(200, {
+            'Content-Type': 'image/png'
+          });
+          const rs = fs.createReadStream('./images/eye3.png');
+          rs.pipe(res);
+          break;
+        }
+        case '/images/eye4.png':{
+          res.writeHead(200, {
+            'Content-Type': 'image/png'
+          });
+          const rs = fs.createReadStream('./images/eye4.png');
+          rs.pipe(res);
+          break;
+        }
         default:{
           break;
         }

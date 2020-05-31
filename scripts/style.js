@@ -6,15 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const pannelbox = document.getElementById('pannelbox');
   const parent = document.getElementById('parent');
   const pannel_array = new Array(7);
-  for(i = 1; i <= 6; i++){
+  for(i = 1; i <= 4; i++){
     pannel_array[i] = new Array(7);
-    for(j = 1; j <= 6; j++){
+    for(j = 1; j <= 1; j++){
       pannel_array[i][j] = {elem: document.getElementById(('pannel' + i) + j), stageNum: -1};
     }
   }
 
-  //試作
-  for(i = 1; i <= 6; i++){
+  for(i = 1; i <= 4; i++){
     //pannel_array[i][1].elem.style.zIndex = toString(5 * i - 1);
     pannel_array[i][1].stageNum = i;
   }
@@ -23,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   init_all_pannels();
 
   function init_all_pannels(){
-    for(i = 1; i <= 6; i++){
-      for(j = 1; j <= 6; j++){
+    for(i = 1; i <= 4; i++){
+      for(j = 1; j <= 1; j++){
         pannel_array[i][j].elem.style.opacity = '0';
       }
     }
@@ -32,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //あるclassの透明度を0にする
   function init_layer_class(stageNum){
-    for(i = 1; i <= 6; i++){
-      for(j = 1; j <= 6; j++){
+    for(i = 1; i <= 4; i++){
+      for(j = 1; j <= 1; j++){
         tmp = pannel_array[i][j];
         if(tmp.stageNum === stageNum){
           tmp.elem.style.opacity = '0';
@@ -45,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //クラスの透明度を1にする
   function appear_layer_class(stageNum){
-    for(i = 1; i <= 6; i++){
-      for(j = 1; j <= 6; j++){
+    for(i = 1; i <= 4; i++){
+      for(j = 1; j <= 1; j++){
         tmp = pannel_array[i][j];
         if(tmp.stageNum === stageNum){
           tmp.elem.style.opacity = '1';
@@ -74,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
       sliderbox.style.top = t2;
       sliderbox.style.left = l2;
       setTimeout(() => {
-        sliderbox.style.transition = '1s';
-      }, 100);
-    }, 2000);
+        sliderbox.style.transition = '2.5s';
+      }, 50);
+    }, 2500);
   }
 
   //メッセージ
@@ -89,13 +88,24 @@ document.addEventListener("DOMContentLoaded", () => {
     messagebox.style.position = 'absolute';
     messagebox.style.top = '600px';
     messagebox.style.left = '600px';
-    messagebox.style.zIndex = '999';
+    messagebox.style.zIndex = '110';
     messagebox.textContent = "message";
 
-    stalker.style.background = 'green';
-    stalker.style.height = '64px';
-    stalker.style.width = '64px';
-    stalker.style.opacity = 0.9;
+    stalker.style.background = 'darkgreen';
+    stalker.style.height = '128px';
+    stalker.style.width = '128px';
+    stalker.style.opacity = 1;
+
+    const diov = document.createElement('img');
+    diov.id = 'diov';
+    diov.src = 'images/eye4.png'
+    document.body.appendChild(diov);
+    diov.style.opacity = '0';
+    diov.style.position = 'absolute';
+    diov.style.top = '400px';
+    diov.style.left = '400px';
+    diov.style.zIndex = '105';
+    diov.style.transition = '10s';
   }
 
   //対応するスライダーを動かす
@@ -147,14 +157,14 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           init_all_pannels();
           finisher();
-        }, 1000);
+        }, 2000);
       }
     }
   }
 
   //クリックされたときの挙動
   function click_events(e){
-    movesliders(e);
+    if(stage < 4)movesliders(e);
   }
 
   //クリックイベントを監視対象に加える
@@ -164,13 +174,23 @@ document.addEventListener("DOMContentLoaded", () => {
   //マウスストーカー
   const stalker = document.getElementById("stalker");
   document.addEventListener('mousemove', function (e) {
-    if(e.target.id === "sliderboxU"){
-      stalker.style.opacity = "1";
-    }
-    else {
-      if(stage < 4)stalker.style.opacity = "0.5";
+    if(stage < 4){
+      if(e.target.id === "sliderboxU"){
+        stalker.style.opacity = "1";
+      }
+      else {
+        stalker.style.opacity = "0.9";
+      } 
     }
     stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+
+    
+    if(stage === 4) {
+      if(e.target.id === "messagebox"){
+        const diov = document.getElementById('diov');
+        diov.style.opacity = '1';
+      }
+    }
   });
 
   
